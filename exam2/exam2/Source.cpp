@@ -8,6 +8,9 @@
 //
 //look at grading rubric and fulfill the parts with a lot of points
 //and comment a lot
+//
+//Citizen vector???
+//remember news and delete
 #include<iostream>
 #include<string>
 #include"Citizen.h"

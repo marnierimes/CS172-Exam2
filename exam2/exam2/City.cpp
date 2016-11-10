@@ -48,7 +48,7 @@ int City::getPopulationSize()
 
 Citizen * City::getCitizenAtIndex(int index)
 {
-	return nullptr;
+	//i think using the vector of citizens for finding a certain index
 }
 
 void City::addCitizen(Citizen * citizen)
