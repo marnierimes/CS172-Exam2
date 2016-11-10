@@ -8,13 +8,32 @@ City::City(string cityName)
 {
 	//use input file for restoring existing populations
 	string fileName = cityName + ".txt";
-	fstream file;
-	file.open()
+	ifstream file(fileName.c_str());
+	if (file.fail())
+	{
+		cout << "Cannot find file" << endl;
+	}
+	string line;
+	while (!file.fail())
+	{
+		//input data
+	}
+	
 }
 
 City::~City()
 {
-	//save the population to a file
+	//save the population to a file of the city name
+	string fileName = cityName + ".txt";
+	ofstream file(fileName.c_str());
+	if (!file.fail())
+	{
+		//check if populationSize is correct use
+		for (int i = 0; i < populationSize; i++)
+		{
+			//output data into file
+		}
+	}
 }
 
 string City::getCityName()
@@ -34,6 +53,7 @@ Citizen * City::getCitizenAtIndex(int index)
 
 void City::addCitizen(Citizen * citizen)
 {
+	//make sure to make a copy of the citizen so it isnt deleted forever
 	//something along the lines of..
 	Citizen* citizen = new Citizen();
 }

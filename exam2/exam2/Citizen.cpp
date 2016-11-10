@@ -3,9 +3,12 @@
 #include<string>
 using namespace std;
 
-Citizen::Citizen(int id, string firstName, string lasName, string color)
+Citizen::Citizen(int id, string firstName, string lastName, string color)
 {
-
+	this->id = id;
+	this->firstName = firstName;
+	this->lastName = lastName;
+	favoriteColor = color;
 }
 
 Citizen::Citizen(Citizen* citizen)
