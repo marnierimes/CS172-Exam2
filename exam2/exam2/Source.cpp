@@ -9,6 +9,9 @@
 //look at grading rubric and fulfill the parts with a lot of points
 //and comment a lot
 #include<iostream>
+#include<string>
+#include"Citizen.h"
+#include"City.h"
 using namespace std;
 
 int main()
