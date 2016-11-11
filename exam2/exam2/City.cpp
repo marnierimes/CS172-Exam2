@@ -17,6 +17,7 @@ City::City(string cityName)
 	while (getline(file, line))
 	{
 		
+		population++;
 	}
 	
 	file.close();
@@ -45,20 +46,22 @@ string City::getCityName()
 
 int City::populationSize()
 {
-	return citizens.size();
+	return population;
 }
 
 Citizen * City::getCitizenAtIndex(int index)
 {
-	//i think using the vector of citizens for finding a certain index
+	//returns specific citizen in the vector
+	return citizens[index];
 }
 
 void City::addCitizen(Citizen * citizen)
 {
-	//make sure to make a copy of the citizen so it isnt deleted forever
-	//something along the lines of..
+	
+	//adding the passed citizen to the citizen vector
 	citizens.push_back(citizen);
 	population++;
+	
 }
 
 Citizen * City::getCitizenWithId(int id)

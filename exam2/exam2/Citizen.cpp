@@ -13,7 +13,7 @@ Citizen::Citizen(int id, string firstName, string lastName, string color)
 
 Citizen::Citizen(Citizen* citizen)
 {
-	Citizen* citizen = new Citizen();
+	
 	//something like this
 	//saving to file?
 }
