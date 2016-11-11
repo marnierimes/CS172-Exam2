@@ -1,3 +1,5 @@
+//I affirm that all code given below was written solely by me, Marnie Rimes,
+//and that any help I received adhered to the rules stated for this exam
 #include<iostream>
 #include<string>
 #include<fstream>
@@ -38,16 +40,19 @@ City::~City()
 			file << citizens[i] << endl;
 		}
 	}
+	//closes the file
 	file.close;
 }
 
 string City::getCityName()
 {
+	//returns the city name
 	return cityName;
 }
 
 int City::populationSize()
 {
+	//returns the population of the city
 	return population;
 }
 
@@ -62,6 +67,7 @@ void City::addCitizen(Citizen * citizen)
 	
 	//adding the passed citizen to the citizen vector
 	citizens.push_back(citizen);
+	//increases the population of the city by one
 	population++;
 	
 }
