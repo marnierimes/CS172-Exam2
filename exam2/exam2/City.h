@@ -10,13 +10,14 @@ public:
 	City(string cityName);
 	~City();
 	string getCityName();
-	int getPopulationSize();
+	int populationSize();
 	Citizen* getCitizenAtIndex(int index);
 	void addCitizen(Citizen* citizen);
 	Citizen* getCitizenWithId(int id);
-	vector<Citizen*> getCitizenForFavoriteColor(string color);
+	vector<Citizen*> getCitizensForFavoriteColor(string color);
 
 private:
 	string cityName;
-	int populationSize;
+	int population;
+	vector<Citizen*> citizens;
 };

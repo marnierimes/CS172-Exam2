@@ -18,7 +18,7 @@ Citizen::Citizen(Citizen* citizen)
 	//saving to file?
 }
 
-string Citizen::getFirstName()
+string Citizen::getFirstName() 
 {
 	return firstName;
 }

@@ -11,6 +11,7 @@
 //
 //Citizen vector???
 //remember news and delete
+//do the extra points in main
 #include<iostream>
 #include<string>
 #include"Citizen.h"
@@ -19,5 +20,6 @@ using namespace std;
 
 int main()
 {
+
 
 }

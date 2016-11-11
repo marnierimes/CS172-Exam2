@@ -5,6 +5,7 @@ using namespace std;
 
 class Citizen
 {
+public:
 	Citizen(int id, string firstName, string lastName, string color);
 	Citizen(Citizen* citizen);
 	string getFirstName();

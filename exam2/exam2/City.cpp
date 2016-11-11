@@ -14,11 +14,12 @@ City::City(string cityName)
 		cout << "Cannot find file" << endl;
 	}
 	string line;
-	while (!file.fail())
+	while (getline(file, line))
 	{
-		//input data
+		
 	}
 	
+	file.close();
 }
 
 City::~City()
@@ -28,10 +29,11 @@ City::~City()
 	ofstream file(fileName.c_str());
 	if (!file.fail())
 	{
-		//check if populationSize is correct use
-		for (int i = 0; i < populationSize; i++)
+		//check if population is correct use
+		for (int i = 0; i < citizens.size(); i++)
 		{
 			//output data into file
+			file << i << " ";
 		}
 	}
 }
@@ -41,9 +43,9 @@ string City::getCityName()
 	return cityName;
 }
 
-int City::getPopulationSize()
+int City::populationSize()
 {
-	return populationSize;
+	return citizens.size();
 }
 
 Citizen * City::getCitizenAtIndex(int index)
@@ -55,15 +57,24 @@ void City::addCitizen(Citizen * citizen)
 {
 	//make sure to make a copy of the citizen so it isnt deleted forever
 	//something along the lines of..
-	Citizen* citizen = new Citizen();
+	citizens.push_back(citizen);
+	population++;
 }
 
 Citizen * City::getCitizenWithId(int id)
 {
-	return nullptr;
+	
 }
 
-vector<Citizen*> City::getCitizenForFavoriteColor(string color)
+vector<Citizen*> City::getCitizensForFavoriteColor(string color)
 {
-	return vector<Citizen*>();
+	for (int i = 0; i < citizens.size(); i++)
+	{
+		if ()
+		{
+
+			return citizens
+		}
+	}
+	
 }
