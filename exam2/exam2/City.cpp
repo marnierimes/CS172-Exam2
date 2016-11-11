@@ -18,11 +18,12 @@ City::City(string cityName)
 		string line;
 		while (getline(file, line))
 		{
+
 			Citizen* citizens = new Citizen();
 			population++;
 		}
 	}
-	
+	//closes file
 	file.close();
 }
 
@@ -34,7 +35,7 @@ City::~City()
 	if (!file.fail())
 	{
 		
-		for (int i = 0; i < citizens.size(); i++)
+		for (int i = 0; i < population; i++)
 		{
 			//output data into file
 			file << citizens[i] << endl;
@@ -42,6 +43,16 @@ City::~City()
 	}
 	//closes the file
 	file.close;
+
+	//deletes data
+	for (int i = 0; i < citizens.size(); i++) {
+
+		Citizen* c = citizens.at(i);
+
+		delete c;
+
+	}
+	
 }
 
 string City::getCityName()
