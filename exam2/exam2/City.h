@@ -4,6 +4,7 @@
 #include<vector>
 #include"Citizen.h"
 
+
 class City
 {
 public:

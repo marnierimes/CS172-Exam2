@@ -2,22 +2,23 @@
 #include<string>
 #include<fstream>
 #include"City.h"
+#include"Citizen.h"
 using namespace std;
 
 City::City(string cityName)
 {
+	this->cityName = cityName;
 	//use input file for restoring existing populations
 	string fileName = cityName + ".txt";
 	ifstream file(fileName.c_str());
-	if (file.fail())
+	if (!file.fail())
 	{
-		cout << "Cannot find file" << endl;
-	}
-	string line;
-	while (getline(file, line))
-	{
-		
-		population++;
+		string line;
+		while (getline(file, line))
+		{
+			Citizen* citizens = new Citizen();
+			population++;
+		}
 	}
 	
 	file.close();
@@ -30,13 +31,14 @@ City::~City()
 	ofstream file(fileName.c_str());
 	if (!file.fail())
 	{
-		//check if population is correct use
+		
 		for (int i = 0; i < citizens.size(); i++)
 		{
 			//output data into file
-			file << i << " ";
+			file << citizens[i] << endl;
 		}
 	}
+	file.close;
 }
 
 string City::getCityName()
@@ -71,11 +73,11 @@ Citizen * City::getCitizenWithId(int id)
 
 vector<Citizen*> City::getCitizensForFavoriteColor(string color)
 {
-	for (int i = 0; i < citizens.size(); i++)
+	for (int i = 0; i < population; i++)
 	{
-		if ()
+		if (color == getCitizensForFavoriteColor())
 		{
-
+			
 			return citizens
 		}
 	}
